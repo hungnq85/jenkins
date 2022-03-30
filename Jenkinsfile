@@ -17,10 +17,10 @@ pipeline {
     //                      engineVersion: 2]
 	
 	
-	stage("Checkout SCM"){
-        cleanWs()
-        checkout scm
-    }
+	// stage("Checkout SCM"){
+    //     cleanWs()
+    //     checkout scm
+    // }
 
     stages {
         stage('Build') {
