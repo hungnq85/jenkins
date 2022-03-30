@@ -31,9 +31,7 @@ pipeline {
 				
 				// echo config_dir
 
-                sh """
-                    export ANSIBLE_FORCE_COLOR=true
-				"""
+              
 				// sh """
                 //     export ANSIBLE_FORCE_COLOR=true
                 //     nsible-playbook -i inventory/hosts --extra-vars "remote_dir=${remote_dir} config_dir=${config_dir}" playbook-deploy.yml
