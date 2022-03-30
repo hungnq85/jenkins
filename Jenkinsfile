@@ -2,8 +2,8 @@ pipeline {
     agent any
 	
 	
-	def remote_dir = 'D:/TMP'
-	def config_dir = './APP'
+	// def remote_dir = 'D:/TMP'
+	// def config_dir = './APP'
 	
 	// def secrets = [
     //     [path: 'jenkins/h2h/secrets', engineVersion: 2, secretValues: [
@@ -27,14 +27,17 @@ pipeline {
             steps {
                 echo 'Start building..'
 				
-				echo remote_dir
+				// echo remote_dir
 				
-				echo config_dir
-				
-				sh """
+				// echo config_dir
+
+                sh """
                     export ANSIBLE_FORCE_COLOR=true
-                    ansible-playbook -i inventory/hosts --extra-vars "remote_dir=${remote_dir} config_dir=${config_dir}" playbook-deploy.yml
 				"""
+				// sh """
+                //     export ANSIBLE_FORCE_COLOR=true
+                //     nsible-playbook -i inventory/hosts --extra-vars "remote_dir=${remote_dir} config_dir=${config_dir}" playbook-deploy.yml
+				// """
 				echo 'End building!'
 				
             }
