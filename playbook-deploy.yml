@@ -1,0 +1,5 @@
+- hosts: target_hosts
+  gather_facts: yes
+
+  roles:
+    - copy_files

@@ -1,0 +1,10 @@
+---
+- name: CHECK FOLDER EXISTS
+  win_file:
+    path: "{{ remote_dir }}/{{ config_dir }}/"
+    state: directory
+
+- name: MOVE FILES TO SERVER
+  win_copy:
+    src: "./{{ config_dir }}/"
+    dest: "{{ remote_dir }}/{{ config_dir }}/"
