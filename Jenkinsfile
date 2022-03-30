@@ -2,8 +2,8 @@ pipeline {
     // agent any
 	
 	
-	def remote_dir = 'E:/H2HRollout-demo'
-	def config_dir = './H2H_RECONCILIATION'
+	def remote_dir = 'D:/TMP'
+	def config_dir = './APP'
 	
 	// def secrets = [
     //     [path: 'jenkins/h2h/secrets', engineVersion: 2, secretValues: [
